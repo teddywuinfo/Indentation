@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./tab.js"></script>
+	<style type="text/css">
+	textarea{
+		width: 48%;
+		min-height: 300px;
+
+		float: left;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="button" id="go" value ="make"> </input>
+	</div>
+	<textarea id="input">
+qz_metadata{
+qz_data{
+addid=4
+typeid=123
+text1=
+text2=
+}
+itemdata{
+0{
+itemname=item0
+itemid=id0
+}
+1{
+itemname = item1
+itemid = id1
+}
+}
+}
+	</textarea>
+	<textarea id="output"></textarea>
+	<script type="text/javascript">
+		var $ = function(id){
+			return document.getElementById(id);
+		}
+		var button = $("go");
+		button.onclick = function () {
+			$("output").value =  Indentation($("input").value);
+		}
+	</script>
+</body>
+</html>
